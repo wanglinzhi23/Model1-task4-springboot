@@ -35,11 +35,11 @@ public class ArticleController {
         pageInfo.setPage(page);
         pageInfo.setPageSize(pageSize);
         pageInfo.setPages((int)dataPage.getPages());
-        pageInfo.setFirstIndex(0);
+        pageInfo.setFirstIndex(1);
         // 计算上一页索引
-        int preIndex = page.equals(0) ? 0 : page - 1;
+        int preIndex = page.equals(1) ? 1 : page - 1;
         // 计算最后一页索引
-        int lastIndex = dataPage.getPages() == 0 ? 0 : (int)dataPage.getPages() - 1;
+        int lastIndex = dataPage.getPages() == 1 ? 1 : (int)dataPage.getPages() ;
         // 计算下一页索引
         int nextIndex = page.equals(lastIndex) ? lastIndex : page + 1;
         pageInfo.setPreIndex(preIndex);
